@@ -1,0 +1,30 @@
+.navbar img{
+    /* height: 50px; */
+    /* width: 140px;
+    height: 40px; */
+
+}
+.psy{
+    /* border: 2px solid ; */
+    /* text-align: center; */
+    text-transform: uppercase;
+}
+img{
+   
+    max-height: 200px;
+ 
+}
+.img{
+    /* background-color: aquamarine; */
+    text-align: center;
+}
+body {
+    /* background-color: aqua; */
+   
+}
+.card{
+ box-shadow: 5px 5px 5px lightblue;;
+}
+.card:hover{
+    box-shadow: none;
+}

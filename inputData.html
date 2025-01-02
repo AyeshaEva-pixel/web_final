@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Input Data</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="inputData.css">
+</head>
+
+<body>
+
+    <header class="mb-5">
+        <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary ">
+            <div class="container">
+                <a class="navbar-brand p-0 m-0" href="#">
+                    <img src="images/Mental Health.png" style="width: 140px; height: 50px;" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="font-page.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="doctorList.php">Doctor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Notification</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <br>
+
+
+    <div class="container mt-2 psy d-flex justify-content-center">
+        <h1>YOUR ACTIVITIES</h1>
+        <img src="images/bg/3.png" style="height: 60px;" alt="">
+    </div>
+
+
+
+    <div class="container mb-3 d-flex align-items-center addTask">
+        <div class="mb-3 col-6 m-3">
+            <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+            <textarea class="form-control " id="textarea" rows="2" placeholder="Add your Task"></textarea>
+
+        </div>
+        <div>
+            <button type="button" id="myBtn" class="btn btn-primary">add</button>
+
+        </div>
+
+
+    </div>
+
+    <form action="storeAnalysisData.php" method="post">
+
+    <div class="container questions p-3" id="div1">
+        <p>Do You Have any Mid-Term Exam Today? If yes then How is your stress level during exam</p>
+
+
+        <div class="container mb-2" id="child">
+
+
+
+
+            <div class="container col-4">
+                <select class="form-select form-select-sm" aria-label="Small select example" name="question1">
+                    <option selected value="3"> select yout stress level</option>
+                    <option value="5">Worst</option>
+                    <option value="4">Bad</option>
+                    <option value="3">Nutral</option>
+                    <option value="2">Good</option>
+                    <option value="1">Very Good</option>
+                </select>
+            </div>
+        </div>
+        <br>
+
+        <p>Do you have Final exam Today?</p>
+
+        <div class="container col-4">
+            <select class="form-select form-select-sm" aria-label="Small select example" name="question2">
+                <option selected value="3"> select yout stress level</option>
+                <option value="5">Worst</option>
+                <option value="4">Bad</option>
+                <option value="3">Nutral</option>
+                <option value="2">Good</option>
+                <option value="1">Very Good</option>
+            </select>
+        </div>
+        <br>
+        <p>Do you have any assignment submission today?</p>
+
+        <div class="container col-4">
+            <select class="form-select form-select-sm" aria-label="Small select example" name="question3">
+                <option selected value="3"> select yout stress level</option>
+                <option value="5">Worst</option>
+                <option value="4">Bad</option>
+                <option value="3">Nutral</option>
+                <option value="2">Good</option>
+                <option value="1">Very Good</option>
+            </select>
+        </div>
+
+        <br>
+        <p>Do you need to cook today? how is your feeling to cook?</p>
+
+        <div class="container col-4">
+            <select class="form-select form-select-sm" aria-label="Small select example" name="question4">
+                <option selected value="3"> select yout stress level</option>
+                <option value="5">Worst</option>
+                <option value="4">Bad</option>
+                <option value="3">Nutral</option>
+                <option value="2">Good</option>
+                <option value="1">Very Good</option>
+            </select>
+        </div>
+        <br>
+
+    </div>
+
+
+    <!-- </div> -->
+
+
+    <div class="container mt-3 d-grid gap-2 col-4 mx-auto">
+       <a href="analysisData.php">
+        <button type="button" class="btn btn-success ">Analysis</button>
+
+       </a>
+    </div>
+  </form>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("myBtn").addEventListener("click", myFunction);
+
+        function myFunction() {
+            let para = document.createElement("p");
+            let text = document.getElementById("textarea");
+            let newtext = para.innerHTML = text.value;
+            let node = document.createTextNode(newtext);
+
+            // let node = para.innerHTML = text.value;
+            // para.appendChild(node);
+            let element = document.getElementById("div1");
+            element.appendChild(para);
+
+            let child = document.getElementById("child");
+            element.appendChild(child.cloneNode(true));
+            text.value = " ";
+        }
+
+
+
+    </script>
+</body>
+
+</html>

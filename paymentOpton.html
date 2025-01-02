@@ -1,0 +1,78 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <style>
+  .payment{
+    margin: auto;
+    width: 50%;
+  }
+  .card{
+    background-color:rgb(246, 185, 195);
+  }
+  .img {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+  }
+  .img img{
+    height: 40px;
+    
+  }
+  button{
+    background-color: #e2136e !important;
+  }
+   
+
+   </style>
+    
+</head>
+  <body class="">
+
+    <br>
+    
+  
+     <div class="container mt-5 d-flex justify-content-center">
+      <h1>Payment Gateway</h1>
+     </div>
+
+    <div class=" mt-5 payment d-flex justify-content-center">
+        <div class="card col-12 m-3 p-4" style="max-width: 500px;">
+            <div class="">
+              <div class="img">
+                <img src="images/bkash.png" class="img-fluid rounded-start" alt="...">
+                <img src="images/nagad.png" class="rounded float-start" alt="...">
+
+              </div>
+              <div class="">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Phone No.</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="01❌❌❌❌❌❌❌❌">
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="***********">
+                      </div>
+               
+
+                  <div class="d-grid">
+                    <button type="button" class="btn btn-outline-dark">PAY NOW  <h4 class="d-inline-block"> ৳ </h4></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

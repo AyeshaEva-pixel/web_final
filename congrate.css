@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(246, 246, 246);
+}
+.congrate{
+    margin:auto;
+    width: 50%;
+    /* border: 2px solid black; */
+    margin-top: 10px;
+}
+img{
+    border: 5px solid rgb(207, 240, 223,0.3);
+}
+.backButton{
+    /* border: 2px solid black; */
+}
